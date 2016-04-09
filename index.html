@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Suggestion Box</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/vendors/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+</head>
+<body ng-app="suggestionBox" ng-controller="MainController">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-2"></div>
+
+			<div class="col-md-8 col-sm-8">
+
+				<!-- App Title -->
+				<h1>{{ helloWorld }}</h1>
+				
+				<!-- The Posts -->
+				<div ng-repeat="post in posts | orderBy: '-upvotes'" class="repeat">
+					<h2>{{ post.title }}</h2>
+					<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post);"></span> Upvotes: {{ post.upvotes }}</p>
+					<p><a href="#">comment</a> on this bro/brodette</p>
+				</div>
+			
+				<!-- Suggestion Form -->
+				<form ng-submit="addSuggestion();">
+					<h3>Want to add a suggestion? Add it below!!</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Add some broish ideas right here" ng-model="title"></input>
+					</div>
+					<button type="submit" class="btn btn-success">Suggest IT</button>
+				</form>
+			</div>
+
+			<div class="col-md-2 col-sm-2"></div>
+		</div>
+	</div>
+
+
+
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Module -->
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script type="text/javascript" src="js/controllers/MainController.js"></script>
+
+	<!-- Services -->
+	<script type="text/javascript" src="js/services/suggestions.js"></script>
+
+</body>
+</html>

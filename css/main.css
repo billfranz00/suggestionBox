@@ -1,0 +1,31 @@
+* {
+	text-align: center;
+	color: gray;
+}
+
+body {
+	background-color: navy;
+}
+
+h1 {
+	top: 100px;
+	color: red;
+	font-family: Verdana;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+form {
+	margin: 75px 20% 0 20%;
+	text-align: left;
+}
+
+form h3,
+	div,
+	input {
+		text-align: left;
+}
+
+.repeat {
+	margin-top: 50px;
+}
