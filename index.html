@@ -5,9 +5,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/vendors/angular.min.js"></script>
-	<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.3/angular-route.min.js" type="text/javascript"></script>
 </head>
-<body ng-app="suggestionBox" ng-controller="MainController">
+<body ng-app="suggestionBox">
 
 	<div class="container">
 		<div class="row">
@@ -15,24 +15,8 @@
 
 			<div class="col-md-8 col-sm-8">
 
-				<!-- App Title -->
-				<h1>{{ helloWorld }}</h1>
-				
-				<!-- The Posts -->
-				<div ng-repeat="post in posts | orderBy: '-upvotes'" class="repeat">
-					<h2>{{ post.title }}</h2>
-					<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post);"></span> Upvotes: {{ post.upvotes }}</p>
-					<p><a href="#">comment</a> on this bro/brodette</p>
-				</div>
-			
-				<!-- Suggestion Form -->
-				<form ng-submit="addSuggestion();">
-					<h3>Want to add a suggestion? Add it below!!</h3>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Add some broish ideas right here" ng-model="title"></input>
-					</div>
-					<button type="submit" class="btn btn-success">Suggest IT</button>
-				</form>
+				<div ng-view></div>
+
 			</div>
 
 			<div class="col-md-2 col-sm-2"></div>
@@ -52,11 +36,13 @@
 	<!-- Module -->
 	<script type="text/javascript" src="js/app.js"></script>
 
+
 	<!-- Controllers -->
 	<script type="text/javascript" src="js/controllers/MainController.js"></script>
 
 	<!-- Services -->
 	<script type="text/javascript" src="js/services/suggestions.js"></script>
+
 
 </body>
 </html>

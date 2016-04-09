@@ -1,11 +1,11 @@
-var app = angular.module('suggestionBox', []);
-/*app.config(function($routeprovider) {
-	$routeprovider
+var app = angular.module('suggestionBox', ['ngRoute']);
+app.config(function($routeProvider) {
+	$routeProvider
 		.when('/', {
 			controller: 'MainController',
 			templateUrl: 'views/box.html'
 		})
-		otherwise({
+		.otherwise({
 			redirectTo: '/'
 		});
-});*/
+});
