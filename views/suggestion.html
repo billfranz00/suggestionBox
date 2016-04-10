@@ -1,8 +1,8 @@
 <!--The Actual Suggestion -->
-<h1>{{ post.title }}</h1>
+<h1 class="sugg">{{ post.title }}</h1>
 
 <!-- Comments -->
-<div ng-repeat="comment in post.comments | orderBy: '-upvotes'" class="repeat">
+<div ng-repeat="comment in post.comments | orderBy: '-upvotes'" class="repeat repeat1">
 	<h2>{{ comment.body }}</h2>
 	<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment);"></span> Upvotes: {{ comment.upvotes }}</p>
 </div>

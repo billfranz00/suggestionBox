@@ -29,3 +29,24 @@ form h3,
 .repeat {
 	margin-top: 50px;
 }
+
+.repeat1,
+.repeat1 p {
+	color: orange;
+}
+
+.repeat1 span {
+	color: green;
+}
+
+.yo {
+	color: pink;
+}
+
+.yo span {
+	color: yellow;
+}
+
+.sugg {
+	color: white;
+}
