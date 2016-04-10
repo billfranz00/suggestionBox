@@ -4,12 +4,7 @@ app.factory('suggestions', [function() {
 			{
 				title: 'Saying "your face" jokes 10 times per day',
 				upvotes: 15,
-				comments: [
-					{
-						body: 'Yo Bro',
-						upvotes: 5
-					}
-				]
+				comments: []
 			},
 			{
 				title: 'Hang Gliding while eating a cheesesteak',
